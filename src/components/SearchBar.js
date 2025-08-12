@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 
 const SearchBar = ({ setCity }) => {
-  const [input, setInput] = useState("");
+  const [q, setQ] = useState("");
 
-  const handleSearch = () => {
-    if (input.trim()) setCity(input);
-    setInput("");
+  const submit = (e) => {
+    e.preventDefault();
+    const trimmed = q.trim();
+    if (!trimmed) return;
+    setCity(trimmed);
+    setQ("");
   };
 
   return (
-    <div className="search-bar">
-      <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Enter city" />
-      <button onClick={handleSearch}>🔍</button>
-    </div>
+    <form className="search" onSubmit={submit}>
+      <input
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        className="search-input"
+        placeholder="Search city (e.g. London, Lagos, Tokyo)"
+      />
+      <button className="search-btn" type="submit">Search</button>
+    </form>
   );
 };
 
