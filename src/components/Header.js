@@ -13,7 +13,7 @@ const Header = ({ theme, setTheme }) => {
           </defs>
           <circle cx="12" cy="12" r="10" fill="url(#g1)" />
         </svg>
-        <h1>Weather Premium</h1>
+        <h1>Nimz Weather App</h1>
       </div>
 
       <div className="header-controls">

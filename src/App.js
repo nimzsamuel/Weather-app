@@ -99,7 +99,7 @@ const App = () => {
             forecast.map((day, i) => <ForecastCard key={i} data={day} />)}
         </div>
       </div>
-      <footer className="footer">Premium Weather • Powered by OpenWeatherMap</footer>
+      <footer className="footer">Nimz Weather App • Powered by OpenWeatherMap</footer>
     </div>
   );
 };
